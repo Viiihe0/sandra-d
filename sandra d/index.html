@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Sandra Dutra | Psicologia Clínica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* RESET BÁSICO E VARIÁVEIS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-color: #3b6e65;     /* Verde azulado acolhedor */
+      --primary-hover: #2d554e;
+      --secondary-color: #f4efe9;   /* Bege suave para fundo */
+      --text-color: #333333;
+      --light-text: #666666;
+      --bg-white: #ffffff;
+      --border-radius: 12px;
+      --transition: all 0.3s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-color);
+      background-color: var(--bg-white);
+    }
+
+    body {
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* HEADER & NAV */
+    .header {
+      background: var(--bg-white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo span {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--light-text);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .btn-nav {
+      background-color: var(--primary-color);
+      color: var(--bg-white) !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: var(--border-radius);
+    }
+
+    .btn-nav:hover {
+      background-color: var(--primary-hover);
+    }
+
+    /* BOTÕES GERAIS */
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--primary-color);
+      color: var(--primary-color);
+      margin-left: 0.5rem;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background-color: var(--secondary-color);
+      padding: 4rem 0;
+    }
+
+    .hero-container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .badge {
+      background-color: #e2ece9;
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    .hero-text h1 {
+      font-size: 2.2rem;
+      margin: 1rem 0;
+      color: #1a332f;
+      line-height: 1.3;
+    }
+
+    .hero-text p {
+      color: var(--light-text);
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      object-fit: cover;
+    }
+
+    /* SOBRE */
+    .sobre {
+      padding: 5rem 0;
+    }
+
+    .sobre-container {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .sobre-img img {
+      width: 100%;
+      max-width: 380px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .sobre-content {
+      flex: 1;
+    }
+
+    .sobre-content h2 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .sobre-content p {
+      margin-bottom: 1rem;
+      color: var(--light-text);
+    }
+
+    .lista-diferenciais {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .lista-diferenciais li {
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    /* SERVIÇOS */
+    .servicos {
+      background-color: var(--secondary-color);
+      padding: 5rem 0;
+    }
+
+    .title-center {
+      text-align: center;
+      font-size: 1.8rem;
+      color: var(--primary-color);
+    }
+
+    .subtitle-center {
+      text-align: center;
+      color: var(--light-text);
+      margin-bottom: 3rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--bg-white);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      margin-bottom: 0.8rem;
+      color: var(--primary-color);
+    }
+
+    .card p {
+      color: var(--light-text);
+      font-size: 0.95rem;
+    }
+
+    /* SEÇÃO DE ARTIGOS / TEXTOS */
+    .artigos {
+      padding: 5rem 0;
+      background-color: var(--bg-white);
+    }
+
+    .artigos-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      border: 1px solid #e2ece9;
+      padding: 0.6rem 1.4rem;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .tab-btn:hover, .tab-btn.active {
+      background-color: var(--primary-color);
+      color: var(--bg-white);
+    }
+
+    .artigos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .artigo-card {
+      background: var(--bg-white);
+      border-radius: var(--border-radius);
+      border: 1px solid #eee;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .artigo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .artigo-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .artigo-tag {
+      align-self: flex-start;
+      background-color: #e2ece9;
+      color: var(--primary-color);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .artigo-title {
+      font-size: 1.15rem;
+      color: #1a332f;
+      margin-bottom: 0.6rem;
+      line-height: 1.4;
+    }
+
+    .artigo-excerpt {
+      font-size: 0.9rem;
+      color: var(--light-text);
+      margin-bottom: 1.2rem;
+      flex: 1;
+    }
+
+    .artigo-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #f0f0f0;
+      padding-top: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--light-text);
+    }
+
+    .artigo-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .artigo-link:hover {
+      text-decoration: underline;
+    }
+
+    /* GALERIA DE FOTOS */
+    .galeria {
+      padding: 5rem 0;
+      background-color: var(--secondary-color);
+    }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .galeria-item {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .galeria-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .galeria-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .galeria-legenda {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+      color: #ffffff;
+      padding: 1.5rem 1rem 0.8rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* FAQ */
+    .faq {
+      background-color: var(--bg-white);
+      padding: 5rem 0;
+    }
+
+    .faq-grid {
+      max-width: 800px;
+      margin: 2rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .faq-item {
+      background: var(--secondary-color);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+    }
+
+    .faq-item h4 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-item p {
+      color: var(--light-text);
+      font-size: 0.95rem;
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: #1c2b28;
+      color: #d1dfdc;
+      padding-top: 3rem;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .footer-col h3, .footer-col h4 {
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .copyright {
+      border-top: 1px solid #2d423e;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.85rem;
+      color: #8fa8a2;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      z-index: 1000;
+      transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    /* RESPONSIVIDADE (MOBILE) */
+    @media (max-width: 768px) {
+      .hero-container, .sobre-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .btn-outline {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">Dra. Sandra Dutra <span>CRP 19858/05</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre Mim</a></li>
+          <li><a href="#servicos">Atendimentos</a></li>
+          <li><a href="#artigos">Artigos</a></li>
+          <li><a href="#consultorio">O Consultório</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+          <li><a href="#contato" class="btn-nav">Agendar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <span class="badge">Atendimento Presencial e Online</span>
+        <h1>Um espaço seguro para o seu autoconhecimento e bem-estar</h1>
+        <p>Psicologia clínica especializada para te ajudar a lidar com a ansiedade, estresse e desafios emocionais de forma leve e acolhedora.</p>
+        <div class="hero-btns">
+          <a href="https://wa.me/5515998447562?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20consultas." target="_blank" class="btn btn-primary">Agendar pelo WhatsApp</a>
+          <a href="#sobre" class="btn btn-outline">Saiba mais</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="foto1.jpeg.jpeg" alt="Foto da Psicóloga">
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MIM -->
+  <section id="sobre" class="sobre">
+    <div class="container sobre-container">
+      <div class="sobre-img">
+        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" alt="Psicóloga em atendimento">
+      </div>
+      <div class="sobre-content">
+        <h2>Muito prazer!</h2>
+        <p>Sou psicóloga clínica com vasta experiência no acompanhamento de adultos e adolescentes. Meu objetivo é proporcionar um ambiente seguro, livre de julgamentos e baseado na ética profissional.</p>
+        <p>Através de estratégias comprovadas cientificamente, trabalho para te fornecer ferramentas práticas no enfrentamento das dificuldades do dia a dia.</p>
+        
+        <ul class="lista-diferenciais">
+          <li>✓ Atendimento ético e sigiloso</li>
+          <li>✓ Cadastro ativo no e-Psi para sessões online</li>
+          <li>✓ Acompanhamento personalizado</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="servicos">
+    <div class="container">
+      <h2 class="title-center">Como posso te ajudar?</h2>
+      <p class="subtitle-center">Conheça as principais modalidades de atendimento</p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="icon">💬</div>
+          <h3>Psicoterapia Individual</h3>
+          <p>Sessões dedicadas ao manejo da ansiedade, depressão, autoestima, relações interpessoais e autoconhecimento.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🌿</div>
+          <h3>Desenvolvimento Humano</h3>
+          <p>Foco no fortalecimento emocional, inteligência emocional, autogerenciamento e superação de limitações interpessoais.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎯</div>
+          <h3>Consultoria de Carreiras</h3>
+          <p>Orientação reflexiva e estratégica para transição profissional, planejamento de carreira e alinhamento de propósito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE ARTIGOS / TEXTOS DA PSICÓLOGA -->
+  <section id="artigos" class="artigos">
+    <div class="container">
+      <h2 class="title-center">Textos e Reflexões</h2>
+      <p class="subtitle-center">Conteúdos sobre saúde mental, crescimento pessoal e carreira</p>
+
+      <!-- BOTÕES DAS ABAS DE CATEGORIA -->
+      <div class="artigos-tabs">
+        <button class="tab-btn active" onclick="filtrarArtigos('todos')">Todos</button>
+        <button class="tab-btn" onclick="filtrarArtigos('psicoterapia')">Psicoterapia</button>
+        <button class="tab-btn" onclick="filtrarArtigos('desenvolvimento')">Desenvolvimento Humano</button>
+        <button class="tab-btn" onclick="filtrarArtigos('carreira')">Consultoria de Carreiras</button>
+      </div>
+
+      <!-- GRID DE ARTIGOS -->
+      <div class="artigos-grid">
+        
+        <!-- Artigo 1: Psicoterapia -->
+        <article class="artigo-card" data-category="psicoterapia">
+          <div class="artigo-body">
+            <span class="artigo-tag">Psicoterapia</span>
+            <h3 class="artigo-title">Como reconhecer e acolher os primeiros sinais da ansiedade</h3>
+            <p class="artigo-excerpt">Entenda os sintomas físicos e emocionais do estresse contínuo e aprenda pequenos exercícios de respiração para momentos de crise.</p>
+            <div class="artigo-footer">
+              <span>01 Out 2026</span>
+              <a href="#" class="artigo-link">Ler artigo →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Artigo 2: Desenvolvimento Humano -->
+        <article class="artigo-card" data-category="desenvolvimento">
+          <div class="artigo-body">
+            <span class="artigo-tag">Desenvolvimento Humano</span>
+            <h3 class="artigo-title">A importância de estabelecer limites saudáveis nas relações</h3>
+            <p class="artigo-excerpt">Dizer não sem culpa é um ato de autopreservação. Saiba como a comunicação assertiva fortalece seus relacionamentos.</p>
+            <div class="artigo-footer">
+              <span>25 Set 2026</span>
+              <a href="#" class="artigo-link">Ler artigo →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Artigo 3: Consultoria de Carreiras -->
+        <article class="artigo-card" data-category="carreira">
+          <div class="artigo-body">
+            <span class="artigo-tag">Consultoria de Carreiras</span>
+            <h3 class="artigo-title">Transição de carreira com segurança e saúde emocional</h3>
+            <p class="artigo-excerpt">Mudar de área exige planejamento, autoconhecimento e preparo emocional para lidar com as incertezas do mercado.</p>
+            <div class="artigo-footer">
+              <span>18 Set 2026</span>
+              <a href="#" class="artigo-link">Ler artigo →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA DO CONSULTÓRIO -->
+  <section id="consultorio" class="galeria">
+    <div class="container">
+      <h2 class="title-center">O Consultório</h2>
+      <p class="subtitle-center">Um ambiente reservado, confortável e preparado para te receber</p>
+
+      <div class="galeria-grid">
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?auto=format&fit=crop&w=600&q=80" alt="Sala de Atendimento">
+          <div class="galeria-legenda">Sala de Atendimento</div>
+        </div>
+
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="Recepção">
+          <div class="galeria-legenda">Recepção Acolhedora</div>
+        </div>
+
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Espaço de Conforto">
+          <div class="galeria-legenda">Espaço de Conforto</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (DÚVIDAS FREQUENTES) -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <h2 class="title-center">Dúvidas Frequentes</h2>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>Como funciona a primeira sessão?</h4>
+          <p>É um momento de escuta inicial para entendermos suas necessidades, alinhar expectativas e tirar todas as dúvidas sobre o processo terapêutico.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Qual a duração e frequência das consultas?</h4>
+          <p>As sessões duram cerca de 50 minutos e ocorrem semanalmente, adaptando-se conforme o planejamento clínico.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Emite recibo para reembolso do plano de saúde?</h4>
+          <p>Sim! Os atendimentos são particulares, mas emito recibos e laudos exigidos pelos convênios para solicitação de reembolso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO / RODAPÉ -->
+  <footer id="contato" class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h3>Dra. Sandra Dutra</h3>
+        <p>Psicóloga Clínica | CRP 19858/05</p>
+        <p>Cadastro e-Psi Aprovado</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <p>📱 WhatsApp: (15) 99844-7562</p>
+        <p>✉️ E-mail: sdpsicologa.contato@gmail.com</p>
+        <p>📍 Itararé - SP</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atendimento</h4>
+        <p>Segunda a Sexta: 08h às 20h</p>
+        <p>Sábados: 08h às 12h</p>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2026 Dra. Sandra Dutra. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+  <a href="https://wa.me/5515998447562?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20consultas." class="whatsapp-float" target="_blank" aria-label="Contato via WhatsApp">
+    💬
+  </a>
+
+  <!-- SCRIPT PARA FILTRAGEM DOS ARTIGOS -->
+  <script>
+    function filtrarArtigos(categoria) {
+      const cards = document.querySelectorAll('.artigo-card');
+      const btns = document.querySelectorAll('.tab-btn');
+
+      // Atualiza estado do botão ativo
+      btns.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Exibe ou esconde os cards com base na categoria
+      cards.forEach(card => {
+        if (categoria === 'todos' || card.getAttribute('data-category') === categoria) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
