@@ -372,3 +372,19 @@ body {
     margin-left: 0;
   }
 }
+.btn-instagram {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.btn-instagram:hover {
+  opacity: 0.9;
+}
