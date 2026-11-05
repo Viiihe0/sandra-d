@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: main # Altere para 'master' se a sua branch principal no GitHub se chamar master
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "artigos"
+    label: "Artigos e Textos"
+    folder: "content/artigos"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data de Publicação", name: "date", widget: "datetime" }
+      - { 
+          label: "Categoria", 
+          name: "category", 
+          widget: "select", 
+          options: [
+            { label: "Psicoterapia", value: "psicoterapia" },
+            { label: "Desenvolvimento Humano", value: "desenvolvimento" },
+            { label: "Consultoria de Carreiras", value: "carreira" }
+          ] 
+        }
+      - { label: "Resumo Curto", name: "excerpt", widget: "text" }
+      - { label: "Conteúdo do Artigo", name: "body", widget: "markdown" }

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dra. Sandra Dutra | Psicologia Clínica</title>
+  <title>IP Ser | Instituto Psicossocial - Dra. Sandra Dutra</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
-    /* RESET BÁSICO E VARIÁVEIS */
+    /* RESET BÁSICO E VARIÁVEIS (AMARELO CLARO E AZUL) */
     * {
       margin: 0;
       padding: 0;
@@ -17,9 +17,10 @@
     }
 
     :root {
-      --primary-color: #3b6e65;     /* Verde azulado acolhedor */
-      --primary-hover: #2d554e;
-      --secondary-color: #f4efe9;   /* Bege suave para fundo */
+      --primary-color: #2b7a97;     /* Azul principal acolhedor */
+      --primary-hover: #1d586d;
+      --secondary-color: #fcf8e8;   /* Amarelo bem claro suave para fundo */
+      --accent-yellow: #f6e8b1;     /* Amarelo de destaque */
       --text-color: #333333;
       --light-text: #666666;
       --bg-white: #ffffff;
@@ -44,7 +45,7 @@
       margin: 0 auto;
     }
 
-    /* HEADER & NAV */
+    /* HEADER & NAV (Logotipo à direita) */
     .header {
       background: var(--bg-white);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -57,36 +58,21 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.2rem 0;
-    }
-
-    .logo {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--primary-color);
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .logo span {
-      font-size: 0.75rem;
-      font-weight: 400;
-      color: var(--light-text);
+      padding: 0.8rem 0;
     }
 
     .nav-links {
       display: flex;
       list-style: none;
       align-items: center;
-      gap: 1.5rem;
+      gap: 1.2rem;
     }
 
     .nav-links a {
       text-decoration: none;
       color: var(--text-color);
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: var(--transition);
     }
 
@@ -103,6 +89,48 @@
 
     .btn-nav:hover {
       background-color: var(--primary-hover);
+    }
+
+    /* Logotipo no canto superior direito */
+    .logo-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+    }
+
+    .logo-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      line-height: 1.1;
+    }
+
+    .logo-subtitle {
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: var(--light-text);
+    }
+
+    .logo-slogan {
+      font-size: 0.65rem;
+      font-style: italic;
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+
+    .logo-img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      border-radius: 50%;
+      border: 2px solid var(--accent-yellow);
     }
 
     /* BOTÕES GERAIS */
@@ -153,8 +181,8 @@
     }
 
     .badge {
-      background-color: #e2ece9;
-      color: var(--primary-color);
+      background-color: var(--accent-yellow);
+      color: #5c4a00;
       font-size: 0.85rem;
       padding: 0.3rem 0.8rem;
       border-radius: 20px;
@@ -164,7 +192,7 @@
     .hero-text h1 {
       font-size: 2.2rem;
       margin: 1rem 0;
-      color: #1a332f;
+      color: #1c3b47;
       line-height: 1.3;
     }
 
@@ -229,7 +257,40 @@
       font-weight: 500;
     }
 
-    /* SERVIÇOS */
+    /* MÉTODO SER */
+    .metodo-ser {
+      background-color: var(--bg-white);
+      padding: 4rem 0 5rem 0;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .metodo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .metodo-card {
+      background: var(--secondary-color);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      border-left: 5px solid var(--primary-color);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .metodo-card h3 {
+      font-size: 1.4rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .metodo-card p {
+      color: var(--light-text);
+      font-size: 0.95rem;
+    }
+
+    /* FRENTES E SERVIÇOS */
     .servicos {
       background-color: var(--secondary-color);
       padding: 5rem 0;
@@ -249,7 +310,7 @@
 
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
     }
 
@@ -259,6 +320,8 @@
       border-radius: var(--border-radius);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
       transition: var(--transition);
+      display: flex;
+      flex-direction: column;
     }
 
     .card:hover {
@@ -271,16 +334,37 @@
     }
 
     .card h3 {
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.3rem;
       color: var(--primary-color);
+    }
+
+    .card .card-subtitle {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--light-text);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.5px;
     }
 
     .card p {
       color: var(--light-text);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
+      flex: 1;
     }
 
-    /* SEÇÃO DE ARTIGOS / TEXTOS */
+    .card-list {
+      list-style: none;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--light-text);
+    }
+
+    .card-list li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* ARTIGOS / TEXTOS */
     .artigos {
       padding: 5rem 0;
       background-color: var(--bg-white);
@@ -297,7 +381,7 @@
     .tab-btn {
       background-color: var(--secondary-color);
       color: var(--text-color);
-      border: 1px solid #e2ece9;
+      border: 1px solid var(--accent-yellow);
       padding: 0.6rem 1.4rem;
       border-radius: 20px;
       font-weight: 500;
@@ -342,7 +426,7 @@
 
     .artigo-tag {
       align-self: flex-start;
-      background-color: #e2ece9;
+      background-color: var(--secondary-color);
       color: var(--primary-color);
       font-size: 0.75rem;
       font-weight: 600;
@@ -354,7 +438,7 @@
 
     .artigo-title {
       font-size: 1.15rem;
-      color: #1a332f;
+      color: #1c3b47;
       margin-bottom: 0.6rem;
       line-height: 1.4;
     }
@@ -374,17 +458,6 @@
       padding-top: 0.8rem;
       font-size: 0.8rem;
       color: var(--light-text);
-    }
-
-    .artigo-link {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
-
-    .artigo-link:hover {
-      text-decoration: underline;
     }
 
     /* GALERIA DE FOTOS */
@@ -463,7 +536,7 @@
 
     /* FOOTER */
     .footer {
-      background-color: #1c2b28;
+      background-color: #142830;
       color: #d1dfdc;
       padding-top: 3rem;
     }
@@ -485,12 +558,25 @@
       margin-bottom: 0.5rem;
     }
 
+    .instagram-link {
+      color: #d1dfdc;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition);
+    }
+
+    .instagram-link:hover {
+      color: #ffffff;
+    }
+
     .copyright {
-      border-top: 1px solid #2d423e;
+      border-top: 1px solid #1f3b47;
       text-align: center;
       padding: 1rem 0;
       font-size: 0.85rem;
-      color: #8fa8a2;
+      color: #9cb8c2;
     }
 
     /* WHATSAPP FLOAT */
@@ -537,26 +623,40 @@
       .btn-outline {
         margin-left: 0;
       }
+
+      .logo-text {
+        text-align: left;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- CABEÇALHO -->
+  <!-- CABEÇALHO COM LOGOTIPO À DIREITA -->
   <header class="header">
     <div class="container nav-container">
-      <a href="#" class="logo">Dra. Sandra Dutra <span>CRP 19858/05</span></a>
+      <!-- Menu de Navegação à esquerda/centro -->
       <nav>
         <ul class="nav-links">
           <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre Mim</a></li>
-          <li><a href="#servicos">Atendimentos</a></li>
-          <li><a href="#artigos">Artigos</a></li>
+          <li><a href="#sobre">Dra. Sandra</a></li>
+          <li><a href="#metodo">Método SER</a></li>
+          <li><a href="#frentes">Nossas Frentes</a></li>
+          <li><a href="#reflexao">Reflexões</a></li>
           <li><a href="#consultorio">O Consultório</a></li>
-          <li><a href="#faq">Dúvidas</a></li>
           <li><a href="#contato" class="btn-nav">Agendar</a></li>
         </ul>
       </nav>
+
+      <!-- Logotipo no Canto Superior Direito (logotipo.1) -->
+      <a href="#" class="logo-brand">
+        <div class="logo-text">
+          <span class="logo-title">IP Ser</span>
+          <span class="logo-subtitle">Instituto Psicossocial</span>
+          <span class="logo-slogan">Cuidando do ser humano em sua essência</span>
+        </div>
+        <img src="logotipo.1.jpeg" alt="Logotipo IP Ser" class="logo-img">
+      </a>
     </div>
   </header>
 
@@ -565,71 +665,117 @@
     <div class="container hero-container">
       <div class="hero-text">
         <span class="badge">Atendimento Presencial e Online</span>
-        <h1>Um espaço seguro para o seu autoconhecimento e bem-estar</h1>
-        <p>Psicologia clínica especializada para te ajudar a lidar com a ansiedade, estresse e desafios emocionais de forma leve e acolhedora.</p>
+        <h1>Desenvolvendo pessoas. Transformando relações.</h1>
+        <p>O <strong>IP Ser</strong> é um ecossistema dedicado à saúde emocional, ao desenvolvimento humano e ao fortalecimento de ambientes corporativos e pessoais.</p>
         <div class="hero-btns">
-          <a href="https://wa.me/5515998447562?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20consultas." target="_blank" class="btn btn-primary">Agendar pelo WhatsApp</a>
-          <a href="#sobre" class="btn btn-outline">Saiba mais</a>
+          <a href="https://wa.me/5515998447562?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20consultas%20e%20programas%20do%20IP%20Ser." target="_blank" class="btn btn-primary">Falar no WhatsApp</a>
+          <a href="#frentes" class="btn btn-outline">Conheça as frentes</a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="foto1.jpeg.jpeg" alt="Foto da Psicóloga">
+        <img src="foto1.jpeg.jpeg" alt="Dra. Sandra Dutra - IP Ser">
       </div>
     </div>
   </section>
 
-  <!-- SOBRE MIM -->
+  <!-- SOBRE DRA. SANDRA DUTRA -->
   <section id="sobre" class="sobre">
     <div class="container sobre-container">
       <div class="sobre-img">
-        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" alt="Psicóloga em atendimento">
+        <img src="sandra2.jpeg" alt="Dra. Sandra Dutra">
       </div>
       <div class="sobre-content">
-        <h2>Muito prazer!</h2>
-        <p>Sou psicóloga clínica com vasta experiência no acompanhamento de adultos e adolescentes. Meu objetivo é proporcionar um ambiente seguro, livre de julgamentos e baseado na ética profissional.</p>
-        <p>Através de estratégias comprovadas cientificamente, trabalho para te fornecer ferramentas práticas no enfrentamento das dificuldades do dia a dia.</p>
+        <h2>Muito prazer! Sou a Dra. Sandra Dutra</h2>
+        <p>Psicóloga clínica (CRP 19858/05) e fundadora do <strong>IP Ser (Instituto Psicossocial)</strong>. Minha trajetória é dedicada a promover o bem-estar emocional e o desenvolvimento humano tanto na clínica quanto no contexto organizacional.</p>
+        <p>Acredito que o cuidado com a saúde mental deve ser integrado, oferecendo suporte acolhedor a indivíduos, famílias e equipes de trabalho.</p>
         
         <ul class="lista-diferenciais">
-          <li>✓ Atendimento ético e sigiloso</li>
+          <li>✓ Fundadora do Instituto Psicossocial IP Ser</li>
+          <li>✓ Atendimento ético, sigiloso e fundamentado cientificamente</li>
+          <li>✓ Criadora do Método SER (Sentir, Equilibrar, Realizar)</li>
           <li>✓ Cadastro ativo no e-Psi para sessões online</li>
-          <li>✓ Acompanhamento personalizado</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos" class="servicos">
+  <!-- MÉTODO SER -->
+  <section id="metodo" class="metodo-ser">
     <div class="container">
-      <h2 class="title-center">Como posso te ajudar?</h2>
-      <p class="subtitle-center">Conheça as principais modalidades de atendimento</p>
+      <h2 class="title-center">O Método SER</h2>
+      <p class="subtitle-center">Uma abordagem transformadora para a vida pessoal e profissional</p>
+
+      <div class="metodo-grid">
+        <div class="metodo-card">
+          <h3>S — Sentir</h3>
+          <p>Reconhecer emoções, desenvolver consciência emocional profunda e fortalecer as bases do autocuidado e da autoaceitação.</p>
+        </div>
+
+        <div class="metodo-card">
+          <h3>E — Equilibrar</h3>
+          <p>Elaborar estratégias práticas para lidar com desafios, conflitos, transições de vida, estresse contínuo e relações interpessoais.</p>
+        </div>
+
+        <div class="metodo-card">
+          <h3>R — Realizar</h3>
+          <p>Transformar a consciência emocional em atitudes concretas, alinhando propósito, desempenho profissional e qualidade de vida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRENTES DE ATUAÇÃO / SERVIÇOS -->
+  <section id="frentes" class="servicos">
+    <div class="container">
+      <h2 class="title-center">Arquitetura de Soluções IP Ser</h2>
+      <p class="subtitle-center">Conheça os nossos programas e modalidades de atendimento</p>
 
       <div class="cards-grid">
+        <!-- Clínica IP Ser -->
         <div class="card">
           <div class="icon">💬</div>
-          <h3>Psicoterapia Individual</h3>
-          <p>Sessões dedicadas ao manejo da ansiedade, depressão, autoestima, relações interpessoais e autoconhecimento.</p>
+          <h3>Clínica IP Ser</h3>
+          <div class="card-subtitle">Atendimento Psicológico</div>
+          <p>Psicoterapia individual para adultos e adolescentes, focada no manejo de ansiedade, estresse, depressão e autoconhecimento.</p>
         </div>
 
+        <!-- Programa SER -->
+        <div class="card">
+          <div class="icon">🏢</div>
+          <h3>Programa SER</h3>
+          <div class="card-subtitle">Saúde Mental Corporativa</div>
+          <p>Soluções para empresas que desejam construir ambientes de trabalho emocionalmente saudáveis e equipes conscientes.</p>
+          <ul class="card-list">
+            <li>• Palestras e Rodas de Conversa</li>
+            <li>• Diagnóstico Psicossocial</li>
+            <li>• Comunicação Não Violenta</li>
+            <li>• Gestão do Estresse e Liderança</li>
+          </ul>
+        </div>
+
+        <!-- Ser Essencial -->
         <div class="card">
           <div class="icon">🌿</div>
-          <h3>Desenvolvimento Humano</h3>
-          <p>Foco no fortalecimento emocional, inteligência emocional, autogerenciamento e superação de limitações interpessoais.</p>
+          <h3>Ser Essencial</h3>
+          <div class="card-subtitle">Conteúdo & Reflexão</div>
+          <p>Espaço de difusão de conteúdo sobre autoconhecimento, inteligência emocional e sentido da vida nas redes sociais e mídias.</p>
         </div>
 
+        <!-- Academia SER -->
         <div class="card">
-          <div class="icon">🎯</div>
-          <h3>Consultoria de Carreiras</h3>
-          <p>Orientação reflexiva e estratégica para transição profissional, planejamento de carreira e alinhamento de propósito.</p>
+          <div class="icon">🎓</div>
+          <h3>Academia SER</h3>
+          <div class="card-subtitle">Desenvolvimento & Cursos</div>
+          <p>Cursos, formações, mentorias e grupos terapêuticos voltados para o crescimento pessoal e capacitação de lideranças.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SEÇÃO DE ARTIGOS / TEXTOS DA PSICÓLOGA -->
-  <section id="artigos" class="artigos">
+  <section id="reflexao" class="artigos">
     <div class="container">
-      <h2 class="title-center">Textos e Reflexões</h2>
+      <h2 class="title-center">Ser Essencial: Textos e Reflexões</h2>
       <p class="subtitle-center">Conteúdos sobre saúde mental, crescimento pessoal e carreira</p>
 
       <!-- BOTÕES DAS ABAS DE CATEGORIA -->
@@ -637,7 +783,7 @@
         <button class="tab-btn active" onclick="filtrarArtigos('todos')">Todos</button>
         <button class="tab-btn" onclick="filtrarArtigos('psicoterapia')">Psicoterapia</button>
         <button class="tab-btn" onclick="filtrarArtigos('desenvolvimento')">Desenvolvimento Humano</button>
-        <button class="tab-btn" onclick="filtrarArtigos('carreira')">Consultoria de Carreiras</button>
+        <button class="tab-btn" onclick="filtrarArtigos('carreira')">Carreira & Empresas</button>
       </div>
 
       <!-- GRID DE ARTIGOS -->
@@ -651,7 +797,6 @@
             <p class="artigo-excerpt">Entenda os sintomas físicos e emocionais do estresse contínuo e aprenda pequenos exercícios de respiração para momentos de crise.</p>
             <div class="artigo-footer">
               <span>01 Out 2026</span>
-              <a href="#" class="artigo-link">Ler artigo →</a>
             </div>
           </div>
         </article>
@@ -664,7 +809,6 @@
             <p class="artigo-excerpt">Dizer não sem culpa é um ato de autopreservação. Saiba como a comunicação assertiva fortalece seus relacionamentos.</p>
             <div class="artigo-footer">
               <span>25 Set 2026</span>
-              <a href="#" class="artigo-link">Ler artigo →</a>
             </div>
           </div>
         </article>
@@ -672,12 +816,11 @@
         <!-- Artigo 3: Consultoria de Carreiras -->
         <article class="artigo-card" data-category="carreira">
           <div class="artigo-body">
-            <span class="artigo-tag">Consultoria de Carreiras</span>
-            <h3 class="artigo-title">Transição de carreira com segurança e saúde emocional</h3>
-            <p class="artigo-excerpt">Mudar de área exige planejamento, autoconhecimento e preparo emocional para lidar com as incertezas do mercado.</p>
+            <span class="artigo-tag">Carreira & Empresas</span>
+            <h3 class="artigo-title">Saúde mental no trabalho e o Programa SER Corporativo</h3>
+            <p class="artigo-excerpt">Como a prevenção do adoecimento emocional transforma a cultura de uma empresa e o desempenho das equipes.</p>
             <div class="artigo-footer">
               <span>18 Set 2026</span>
-              <a href="#" class="artigo-link">Ler artigo →</a>
             </div>
           </div>
         </article>
@@ -694,17 +837,17 @@
 
       <div class="galeria-grid">
         <div class="galeria-item">
-          <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?auto=format&fit=crop&w=600&q=80" alt="Sala de Atendimento">
+          <img src="sofa2.jpeg" alt="Sala de Atendimento">
           <div class="galeria-legenda">Sala de Atendimento</div>
         </div>
 
         <div class="galeria-item">
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="Recepção">
+          <img src="sofa1.jpeg" alt="Recepção">
           <div class="galeria-legenda">Recepção Acolhedora</div>
         </div>
 
         <div class="galeria-item">
-          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Espaço de Conforto">
+          <img src="sofa3.jpeg" alt="Espaço de Conforto">
           <div class="galeria-legenda">Espaço de Conforto</div>
         </div>
       </div>
@@ -718,18 +861,13 @@
 
       <div class="faq-grid">
         <div class="faq-item">
-          <h4>Como funciona a primeira sessão?</h4>
-          <p>É um momento de escuta inicial para entendermos suas necessidades, alinhar expectativas e tirar todas as dúvidas sobre o processo terapêutico.</p>
+          <h4>Como funciona a primeira consulta na Clínica IP Ser?</h4>
+          <p>É um momento de escuta acolhedora para compreender as demandas do paciente, alinhar expectativas e apresentar o plano terapêutico com base no Método SER.</p>
         </div>
 
         <div class="faq-item">
-          <h4>Qual a duração e frequência das consultas?</h4>
-          <p>As sessões duram cerca de 50 minutos e ocorrem semanalmente, adaptando-se conforme o planejamento clínico.</p>
-        </div>
-
-        <div class="faq-item">
-          <h4>Emite recibo para reembolso do plano de saúde?</h4>
-          <p>Sim! Os atendimentos são particulares, mas emito recibos e laudos exigidos pelos convênios para solicitação de reembolso.</p>
+          <h4>Como levar o Programa SER para a minha empresa?</h4>
+          <p>Realizamos um diagnóstico psicossocial prévio para identificar as necessidades da sua equipe e formatar bancadas de palestras, workshops ou atendimentos contínuos sob medida.</p>
         </div>
       </div>
     </div>
@@ -739,8 +877,9 @@
   <footer id="contato" class="footer">
     <div class="container footer-container">
       <div class="footer-col">
-        <h3>Dra. Sandra Dutra</h3>
-        <p>Psicóloga Clínica | CRP 19858/05</p>
+        <h3>IP Ser</h3>
+        <p>Instituto Psicossocial</p>
+        <p>Dra. Sandra Dutra | CRP 19858/05</p>
         <p>Cadastro e-Psi Aprovado</p>
       </div>
 
@@ -748,23 +887,28 @@
         <h4>Contato</h4>
         <p>📱 WhatsApp: (15) 99844-7562</p>
         <p>✉️ E-mail: sdpsicologa.contato@gmail.com</p>
-        <p>📍 Itararé - SP</p>
+        <p>
+          📷 Instagram: 
+          <a href="https://www.instagram.com/institutopsicossocialser?utm_source=qr&stkn=cXNkcHVqcXZoc2hx" class="instagram-link" target="_blank" rel="noopener noreferrer">
+            @institutopsicossocialser
+          </a>
+        </p>
+        <p>📍 Rua Newton Prado, 206. Itararé - SP</p>
       </div>
 
       <div class="footer-col">
         <h4>Atendimento</h4>
-        <p>Segunda a Sexta: 08h às 20h</p>
-        <p>Sábados: 08h às 12h</p>
+        <p>Segunda a Sexta: 08h às 18h</p>
       </div>
     </div>
     
     <div class="copyright">
-      <p>&copy; 2026 Dra. Sandra Dutra. Todos os direitos reservados.</p>
+      <p>&copy; 2026 IP Ser - Instituto Psicossocial | Dra. Sandra Dutra. Todos os direitos reservados.</p>
     </div>
   </footer>
 
   <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-  <a href="https://wa.me/5515998447562?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20consultas." class="whatsapp-float" target="_blank" aria-label="Contato via WhatsApp">
+  <a href="https://wa.me/5515998447562?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20consultas%20e%20programas%20do%20IP%20Ser." class="whatsapp-float" target="_blank" aria-label="Contato via WhatsApp">
     💬
   </a>
 
