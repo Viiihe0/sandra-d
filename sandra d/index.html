@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IP Ser | Instituto Psicossocial - Dra. Sandra Dutra</title>
+  <title>IP Ser | Instituto Psicossocial Ser - Sandra Dutra</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -40,12 +40,12 @@
     }
 
     .container {
-      width: 90%;
-      max-width: 1100px;
+      width: 92%;
+      max-width: 1140px;
       margin: 0 auto;
     }
 
-    /* HEADER & NAV (Logotipo à direita) */
+    /* HEADER & NAV (Logotipo encaixado à direita) */
     .header {
       background: var(--bg-white);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -58,21 +58,23 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.8rem 0;
+      padding: 0.7rem 0;
+      gap: 1rem;
     }
 
     .nav-links {
       display: flex;
       list-style: none;
       align-items: center;
-      gap: 1.2rem;
+      gap: 1.1rem;
     }
 
     .nav-links a {
       text-decoration: none;
       color: var(--text-color);
       font-weight: 500;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
+      white-space: nowrap;
       transition: var(--transition);
     }
 
@@ -83,7 +85,7 @@
     .btn-nav {
       background-color: var(--primary-color);
       color: var(--bg-white) !important;
-      padding: 0.5rem 1.2rem;
+      padding: 0.45rem 1.1rem;
       border-radius: var(--border-radius);
     }
 
@@ -95,8 +97,9 @@
     .logo-brand {
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 0.75rem;
       text-decoration: none;
+      flex-shrink: 0;
     }
 
     .logo-text {
@@ -106,31 +109,33 @@
     }
 
     .logo-title {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: var(--primary-color);
       line-height: 1.1;
     }
 
     .logo-subtitle {
-      font-size: 0.7rem;
-      font-weight: 400;
+      font-size: 0.68rem;
+      font-weight: 500;
       color: var(--light-text);
     }
 
     .logo-slogan {
-      font-size: 0.65rem;
+      font-size: 0.62rem;
       font-style: italic;
       color: var(--primary-color);
       font-weight: 500;
     }
 
     .logo-img {
-      width: 50px;
-      height: 50px;
+      width: 56px;
+      height: 56px;
       object-fit: contain;
       border-radius: 50%;
       border: 2px solid var(--accent-yellow);
+      background-color: var(--bg-white);
+      flex-shrink: 0;
     }
 
     /* BOTÕES GERAIS */
@@ -180,7 +185,53 @@
       flex: 1;
     }
 
+    /* LOGOTIPO ACIMA DO BADGE */
+    .hero-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-logo-img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      border-radius: 50%;
+      border: 2px solid var(--accent-yellow);
+      background-color: var(--bg-white);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      flex-shrink: 1;
+    }
+
+    .hero-logo-info {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .hero-logo-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      line-height: 1.1;
+    }
+
+    .hero-logo-subtitle {
+      font-size: 0.76rem;
+      font-weight: 500;
+      color: var(--light-text);
+    }
+
+    .hero-logo-slogan {
+      font-size: 0.7rem;
+      font-style: italic;
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+
     .badge {
+      display: inline-block;
       background-color: var(--accent-yellow);
       color: #5c4a00;
       font-size: 0.85rem;
@@ -604,10 +655,24 @@
     }
 
     /* RESPONSIVIDADE (MOBILE) */
+    @media (max-width: 960px) {
+      .logo-text {
+        display: none;
+      }
+    }
+
     @media (max-width: 768px) {
       .hero-container, .sobre-container {
         flex-direction: column;
         text-align: center;
+      }
+
+      .hero-logo {
+        justify-content: center;
+      }
+
+      .hero-logo-info {
+        text-align: left;
       }
 
       .nav-links {
@@ -625,6 +690,7 @@
       }
 
       .logo-text {
+        display: flex;
         text-align: left;
       }
     }
@@ -635,13 +701,13 @@
   <!-- CABEÇALHO COM LOGOTIPO À DIREITA -->
   <header class="header">
     <div class="container nav-container">
-      <!-- Menu de Navegação à esquerda/centro -->
+      <!-- Menu de Navegação à esquerda -->
       <nav>
         <ul class="nav-links">
           <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Dra. Sandra</a></li>
+          <li><a href="#sobre">Sandra</a></li>
           <li><a href="#metodo">Método SER</a></li>
-          <li><a href="#frentes">Nossas Frentes</a></li>
+          <li><a href="#frentes">Soluções</a></li>
           <li><a href="#reflexao">Reflexões</a></li>
           <li><a href="#consultorio">O Consultório</a></li>
           <li><a href="#contato" class="btn-nav">Agendar</a></li>
@@ -649,10 +715,10 @@
       </nav>
 
       <!-- Logotipo no Canto Superior Direito (logotipo.1) -->
-      <a href="#" class="logo-brand">
+      <a href="#inicio" class="logo-brand">
         <div class="logo-text">
           <span class="logo-title">IP Ser</span>
-          <span class="logo-subtitle">Instituto Psicossocial</span>
+          <span class="logo-subtitle">Instituto Psicossocial Ser</span>
           <span class="logo-slogan">Cuidando do ser humano em sua essência</span>
         </div>
         <img src="logotipo.1.jpeg" alt="Logotipo IP Ser" class="logo-img">
@@ -664,16 +730,26 @@
   <section id="inicio" class="hero">
     <div class="container hero-container">
       <div class="hero-text">
+        <!-- LOGOTIPO ACIMA DE "ATENDIMENTO PRESENCIAL E ONLINE" -->
+        <div class="hero-logo">
+          <img src="logotipo.1.jpeg" alt="Logotipo IP Ser" class="hero-logo-img">
+          <div class="hero-logo-info">
+            <span class="hero-logo-title">IP Ser</span>
+            <span class="hero-logo-subtitle">Instituto Psicossocial Ser</span>
+            <span class="hero-logo-slogan">Cuidando do ser humano em sua essência</span>
+          </div>
+        </div>
+
         <span class="badge">Atendimento Presencial e Online</span>
-        <h1>Desenvolvendo pessoas. Transformando relações.</h1>
-        <p>O <strong>IP Ser</strong> é um ecossistema dedicado à saúde emocional, ao desenvolvimento humano e ao fortalecimento de ambientes corporativos e pessoais.</p>
+        <h1>Promoção do bem-estar psicoemocional e desenvolvimento humano.</h1>
+        <p>O <strong>IPSer</strong> é um espaço dedicado à saúde psicoemocional, ao desenvolvimento humano e fortalecimento das relações em ambientes corporativos, familiares e pessoais.</p>
         <div class="hero-btns">
-          <a href="https://wa.me/5515998447562?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20consultas%20e%20programas%20do%20IP%20Ser." target="_blank" class="btn btn-primary">Falar no WhatsApp</a>
-          <a href="#frentes" class="btn btn-outline">Conheça as frentes</a>
+          <a href="https://wa.me/5515998447562?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20consultas%20e%20programas%20do%20IP%20Ser." target="_blank" class="btn btn-primary">Fale conosco</a>
+          <a href="#frentes" class="btn btn-outline">Conheça as soluções</a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="foto1.jpeg.jpeg" alt="Dra. Sandra Dutra - IP Ser">
+        <img src="sandracortada.jpeg" alt="Dra. Sandra Dutra - IP Ser">
       </div>
     </div>
   </section>
@@ -685,7 +761,7 @@
         <img src="sandra2.jpeg" alt="Dra. Sandra Dutra">
       </div>
       <div class="sobre-content">
-        <h2>Muito prazer! Sou a Dra. Sandra Dutra</h2>
+        <h2>Muito prazer! Sou a Sandra Dutra</h2>
         <p>Psicóloga clínica (CRP 19858/05) e fundadora do <strong>IP Ser (Instituto Psicossocial)</strong>. Minha trajetória é dedicada a promover o bem-estar emocional e o desenvolvimento humano tanto na clínica quanto no contexto organizacional.</p>
         <p>Acredito que o cuidado com a saúde mental deve ser integrado, oferecendo suporte acolhedor a indivíduos, famílias e equipes de trabalho.</p>
         
@@ -713,7 +789,7 @@
 
         <div class="metodo-card">
           <h3>E — Equilibrar</h3>
-          <p>Elaborar estratégias práticas para lidar com desafios, conflitos, transições de vida, estresse contínuo e relações interpessoais.</p>
+          <p>Pensar, refletir e elaborar estratégias pessoais para lidar com desafios, conflitos, transições de vida, estresse contínuo e relações interpessoais.</p>
         </div>
 
         <div class="metodo-card">
@@ -727,7 +803,7 @@
   <!-- FRENTES DE ATUAÇÃO / SERVIÇOS -->
   <section id="frentes" class="servicos">
     <div class="container">
-      <h2 class="title-center">Arquitetura de Soluções IP Ser</h2>
+      <h2 class="title-center">Soluções IP Ser</h2>
       <p class="subtitle-center">Conheça os nossos programas e modalidades de atendimento</p>
 
       <div class="cards-grid">
@@ -749,7 +825,7 @@
             <li>• Palestras e Rodas de Conversa</li>
             <li>• Diagnóstico Psicossocial</li>
             <li>• Comunicação Não Violenta</li>
-            <li>• Gestão do Estresse e Liderança</li>
+            <li>• Gestão das emoções e Liderança</li>
           </ul>
         </div>
 
@@ -758,15 +834,15 @@
           <div class="icon">🌿</div>
           <h3>Ser Essencial</h3>
           <div class="card-subtitle">Conteúdo & Reflexão</div>
-          <p>Espaço de difusão de conteúdo sobre autoconhecimento, inteligência emocional e sentido da vida nas redes sociais e mídias.</p>
+          <p>Espaço de difusão de conteúdo sobre autoconhecimento, inteligência emocional e sentido da vida.</p>
         </div>
 
         <!-- Academia SER -->
         <div class="card">
           <div class="icon">🎓</div>
-          <h3>Academia SER</h3>
+          <h3>Método SER</h3>
           <div class="card-subtitle">Desenvolvimento & Cursos</div>
-          <p>Cursos, formações, mentorias e grupos terapêuticos voltados para o crescimento pessoal e capacitação de lideranças.</p>
+          <p>Cursos, palestras, treinamentos e desenvolvimento.</p>
         </div>
       </div>
     </div>
@@ -867,7 +943,7 @@
 
         <div class="faq-item">
           <h4>Como levar o Programa SER para a minha empresa?</h4>
-          <p>Realizamos um diagnóstico psicossocial prévio para identificar as necessidades da sua equipe e formatar bancadas de palestras, workshops ou atendimentos contínuos sob medida.</p>
+          <p>Realizamos um diagnóstico psicossocial prévio para identificar as necessidades da sua equipe e formatar bancadas de palestras, workshops ou atendimentos contínuos sob medida e elaborar um plano de desenvolvimento sob medida.</p>
         </div>
       </div>
     </div>
@@ -878,8 +954,8 @@
     <div class="container footer-container">
       <div class="footer-col">
         <h3>IP Ser</h3>
-        <p>Instituto Psicossocial</p>
-        <p>Dra. Sandra Dutra | CRP 19858/05</p>
+        <p>Instituto Psicossocial Ser</p>
+        <p>Sandra Dutra | CRP 06/1547-IS CRP 00/19858</p>
         <p>Cadastro e-Psi Aprovado</p>
       </div>
 
@@ -897,8 +973,8 @@
       </div>
 
       <div class="footer-col">
-        <h4>Atendimento</h4>
-        <p>Segunda a Sexta: 08h às 18h</p>
+        <h4>Atendimento apenas com horário marcado</h4>
+        <p>Segunda a Sexta: 09h às 18h</p>
       </div>
     </div>
     
@@ -920,7 +996,9 @@
 
       // Atualiza estado do botão ativo
       btns.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
+      if (event && event.target) {
+        event.target.classList.add('active');
+      }
 
       // Exibe ou esconde os cards com base na categoria
       cards.forEach(card => {
